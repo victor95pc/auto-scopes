@@ -1,3 +1,4 @@
+require 'pry'
 require 'fileutils'
 # Remove tmp dir of dummy app before it's booted.
 FileUtils.rm_rf "#{File.dirname(__FILE__)}/dummy/tmp"
