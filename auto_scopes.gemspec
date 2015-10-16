@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["victor95pc"]
   spec.email         = ["victorpalomocastro@gmail.com"]
 
-  spec.summary       = %q{Recycle all your defined scopes for others models}
+  spec.summary       = %q{Create automatic scopes to make your models more DRYer}
   spec.description   = %q{}
   spec.homepage      = "https://github.com/victor95pc/auto-scopes"
 
