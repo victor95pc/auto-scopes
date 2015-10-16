@@ -47,7 +47,13 @@ module AutoScopes
     def get_last_association_from_path
     	path.inject(klass) do |klass, reflection|
 
-    		reflection_klass = klass.reflections[reflection.to_sym]
+    		reflection_access = if Rails.version < '4.2'
+    				reflection.to_sym 
+	    		else
+    				reflection 
+    		end
+
+    		reflection_klass = klass.reflections[reflection_access]
 
     		if block_given? && path.last == reflection && reflection_klass.macro == :belongs_to
     			yield klass, reflection_klass.foreign_key
