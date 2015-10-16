@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "pry"
+require_relative '../spec/spec_helper'
+
+require "irb"
+IRB.start

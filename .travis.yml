@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+  - 2.1.6
+before_script:
+  - gem install bundler
+  - "cd spec/dummy"
+  - "bundle exec rake db:migrate test"
+  - "cd ../.."
+  - "bundle exec appraisal install"
+script: "bundle exec rake appraisal test"
+gemfile:
+  - gemfiles/3.2.gemfile
+  - gemfiles/4.0.gemfile
+  - gemfiles/4.1.gemfile
+  - gemfiles/4.2.gemfile
