@@ -134,13 +134,10 @@ PLATFORMS
 DEPENDENCIES
   appraisal
   auto_scopes!
-  bundler (~> 1.10)
+  bundler (~> 1.8)
   generator_spec
   pry
   rails (~> 4.0)
   rake (~> 10.0)
   rspec (~> 3.0)
   sqlite3
-
-BUNDLED WITH
-   1.10.6
