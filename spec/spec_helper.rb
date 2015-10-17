@@ -5,4 +5,7 @@ FileUtils.rm_rf "#{File.dirname(__FILE__)}/dummy/tmp"
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require_relative '../spec/dummy/config/environment.rb'
+
 require 'auto_scopes'
+require 'generator_spec'
+require 'generators/auto_scopes/install_generator'
