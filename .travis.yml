@@ -1,6 +1,8 @@
 language: ruby
 rvm:
-  - 2.1.6
+  - 2.2
+  - 2.1
+  - 2.0
 before_script:
   - gem install bundler
   - "cd spec/dummy"
@@ -8,15 +10,7 @@ before_script:
   - "cd ../.."
 script: "bundle exec rspec"
 gemfile:
-  - gemfiles/ruby2.2_rails3.2.gemfile
-  - gemfiles/ruby2.2_rails4.0.gemfile
-  - gemfiles/ruby2.2_rails4.1.gemfile
-  - gemfiles/ruby2.2_rails4.2.gemfile
-  - gemfiles/ruby2.1_rails3.2.gemfile
-  - gemfiles/ruby2.1_rails4.0.gemfile
-  - gemfiles/ruby2.1_rails4.1.gemfile
-  - gemfiles/ruby2.1_rails4.2.gemfile
-  - gemfiles/ruby2.0_rails3.2.gemfile
-  - gemfiles/ruby2.0_rails4.0.gemfile
-  - gemfiles/ruby2.0_rails4.1.gemfile
-  - gemfiles/ruby2.0_rails4.2.gemfile
+  - gemfiles/3.2.gemfile
+  - gemfiles/4.0.gemfile
+  - gemfiles/4.1.gemfile
+  - gemfiles/4.2.gemfile
