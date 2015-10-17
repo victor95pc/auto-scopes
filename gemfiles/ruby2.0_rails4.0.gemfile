@@ -2,6 +2,8 @@
 
 source "https://rubygems.org"
 
+ruby "2.1.6"
+
 gem "rails", :git => "https://github.com/rails/rails.git", :branch => "4-0-stable"
 
 gemspec :path => "../"
