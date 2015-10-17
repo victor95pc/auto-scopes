@@ -18,7 +18,7 @@ module AutoScopes
 	configurable :associations_location, :prefix
 
 	configuration_defaults do |c|
-    c.associations_location = 'config/auto_scopes_associations'
+    c.associations_location = 'config/auto_scopes'
     c.prefix                = 'by'
   end
 
