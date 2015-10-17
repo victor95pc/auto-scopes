@@ -10,3 +10,4 @@
 /.rvmrc
 /spec/dummy/log/
 /spec/dummy/db/test.sqlite3
+spec/tmp/
