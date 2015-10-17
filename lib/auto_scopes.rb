@@ -9,7 +9,6 @@ require 'active_record'
 require "auto_scopes/version"
 require "auto_scopes/associations_methods"
 require "auto_scopes/associations_chains"
-# require "auto_scopes/create"
 require "auto_scopes/check_models"
 
 module AutoScopes
