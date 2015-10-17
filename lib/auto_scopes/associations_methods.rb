@@ -4,7 +4,7 @@ module AutoScopes
 
 		delegate :klass, to: :associations_chains
 
-		delegate :configuration, to: '::AutoScopes'
+		delegate :config, to: AutoScopes
 
 		def initialize(associations_chains, path = associations_chains.path)
 			self.associations_chains = associations_chains
@@ -32,8 +32,7 @@ module AutoScopes
 
     	field ||= 'id'
 
-
-      klass.define_singleton_method("#{configuration.prefix}_#{associations_chains.path.last}") do |id|
+      klass.define_singleton_method("#{config.scope_association_prefix}_#{associations_chains.path.last}") do |id|
         joins(joins_path).where(association_klass.table_name => { field => id })
       end
 		end

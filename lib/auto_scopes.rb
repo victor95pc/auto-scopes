@@ -14,16 +14,21 @@ require "auto_scopes/check_models"
 module AutoScopes
 	include Configurations
 
-	configurable :associations_location, :prefix
+	configurable :auto_scopes_location, :scope_association_prefix, :create_scope_for_association
 
 	configuration_defaults do |c|
-    c.associations_location = 'config/auto_scopes'
-    c.prefix                = 'by'
+		c.auto_scopes_location         = 'config/auto_scopes'
+		c.scope_association_prefix     = 'by'
+		c.create_scope_for_association = true
   end
 
 	class << self
+		def config
+			AutoScopes.configuration
+		end
+
 		def associations_source
-			@_associations_source ||= YAML.load_file(Rails.root.join(AutoScopes.configuration.associations_location + '.yml')) || []
+			@_associations_source ||= YAML.load_file(Rails.root.join(config.auto_scopes_location + '.yml')) || []
 		end
 	end
 end

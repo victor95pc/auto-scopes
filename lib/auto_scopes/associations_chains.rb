@@ -1,6 +1,8 @@
 module AutoScopes
 	class AssociationsChains < Struct.new(:klass, :associations, :path)
 
+		delegate :config, to: AutoScopes
+
 		attr_accessor :association
 
 		def look_inside_chain
@@ -9,7 +11,7 @@ module AutoScopes
 
       	path.push(association_parent)
 
-        method_maker.create_association
+        method_maker.create_association if config.create_scope_for_association
 
         if nested_hash?
         	self.class.new(klass, association, path.clone).look_inside_chain
