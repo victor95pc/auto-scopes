@@ -89,7 +89,7 @@ def self.age(age)
 end
 ```
 
-Auto_scopes also will create scope for each association, for example
+AutoScopes also will create scope for each association, for example
 ```ruby
 # app/models/ceo.rb
 def self.by_companies(id)
