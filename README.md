@@ -1,5 +1,6 @@
 # AutoScopes
 [![Build Status](https://travis-ci.org/victor95pc/auto-scopes.svg?branch=master)](https://travis-ci.org/victor95pc/auto-scopes)
+[![Dependency Status](https://gemnasium.com/victor95pc/auto-scopes.svg)](https://gemnasium.com/victor95pc/auto-scopes)
 
 Recycle already defined scopes on multiple models whatever the association are, making your models way more DRYer
 
