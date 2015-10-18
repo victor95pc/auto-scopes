@@ -93,7 +93,7 @@ AutoScopes also will create scope for each association, for example
 ```ruby
 # app/models/ceo.rb
 def self.by_companies(id)
-  joins(companies).where('companies.id = ?', id)
+  joins(:companies).where('companies.id = ?', id)
 end
 
 def self.by_employed(id)
