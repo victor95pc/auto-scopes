@@ -1,7 +1,0 @@
-Ceo:
-  companies:
-    employeds:
-    - by_name
-    - age
-Employed:
-  company:

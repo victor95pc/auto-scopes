@@ -5,7 +5,7 @@
 # 
 # scope_association_prefix: in each association the parent model
 # this is the prefix added to them
-AutoScopes.configure do |c|
+AutoScopes.setup do |c|
 	# c.auto_scopes_location         = 'config/auto_scopes'
 	# c.create_scope_for_association = true
 	# c.scope_association_prefix     = 'by'

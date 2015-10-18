@@ -104,7 +104,7 @@ end
 If you dont want this behavior you can set the option create_scope_for_association to false
 ```ruby
 # config/initializers/auto_scopes.rb
-AutoScopes.configure do |c|
+AutoScopes.setup do |c|
 	c.create_scope_for_association = false
 end
 ```

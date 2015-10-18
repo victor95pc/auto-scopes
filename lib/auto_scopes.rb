@@ -9,12 +9,12 @@ require 'active_record'
 require "auto_scopes/version"
 require "auto_scopes/associations_methods"
 require "auto_scopes/associations_chains"
-require "auto_scopes/check_models"
+require "auto_scopes/models"
 
 module AutoScopes
 	include Configurations
 
-	configurable :auto_scopes_location, :scope_association_prefix, :create_scope_for_association
+	configurable :scope_association_prefix, :create_scope_for_association, :auto_scopes_location
 
 	configuration_defaults do |c|
 		c.auto_scopes_location         = 'config/auto_scopes'
@@ -24,11 +24,12 @@ module AutoScopes
 
 	class << self
 		def config
-			AutoScopes.configuration
+			configuration
 		end
 
-		def associations_source
-			@_associations_source ||= YAML.load_file(Rails.root.join(config.auto_scopes_location + '.yml')) || []
+		def setup(&block)
+			AutoScopes.configure(&block)
+			AutoScopes::Models.check!
 		end
 	end
 end
