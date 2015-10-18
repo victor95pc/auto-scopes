@@ -3,7 +3,7 @@ require 'rails/generators/base'
 module AutoScopes
   module Generators
     class InstallGenerator < Rails::Generators::Base
-    	source_root File.expand_path('config')
+    	source_root File.expand_path('../../../../config', __FILE__)
 
       desc 'Create a default files for auto_scopes with some use cases'
 
