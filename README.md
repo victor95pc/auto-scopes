@@ -33,7 +33,7 @@ And then execute:
 After you install AutoScopes and add it to your Gemfile, you need to run the generator:
 
 ```console
-rake auto_scopes:install
+rails g auto_scopes:install
 ```
 
 The generator will install an initializer with some instructions and a YAML 
