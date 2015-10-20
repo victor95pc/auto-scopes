@@ -1,6 +1,8 @@
 # AutoScopes
 [![Build Status](https://travis-ci.org/victor95pc/auto-scopes.svg?branch=master)](https://travis-ci.org/victor95pc/auto-scopes)
 [![Dependency Status](https://gemnasium.com/victor95pc/auto-scopes.svg)](https://gemnasium.com/victor95pc/auto-scopes)
+[![Code Climate](https://codeclimate.com/github/victor95pc/auto-scopes/badges/gpa.svg)](https://codeclimate.com/github/victor95pc/auto-scopes)
+[![Test Coverage](https://codeclimate.com/github/victor95pc/auto-scopes/badges/coverage.svg)](https://codeclimate.com/github/victor95pc/auto-scopes/coverage)
 
 Recycle already defined scopes on multiple models whatever the association are, making your models way more DRYer
 

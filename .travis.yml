@@ -14,3 +14,7 @@ gemfile:
   - gemfiles/4.0.gemfile
   - gemfiles/4.1.gemfile
   - gemfiles/4.2.gemfile
+
+addons:
+  code_climate:
+    repo_token: 95524d49aeaaaaa1e6f48d4ce653776f38693ff023d836c54e57d4da0c9e70a2

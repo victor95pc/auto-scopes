@@ -1,3 +1,6 @@
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 require 'pry'
 require 'fileutils'
 # Remove tmp dir of dummy app before it's booted.
