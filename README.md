@@ -68,7 +68,7 @@ class Employed < ActiveRecord::Base
   end
 end
 ```
-If you want to get a CEOs by a employed´s name or age, you must write your auto_scopes file like this one:
+If you want to get a CEOs by a employed´s name or age, you must write your AutoScopes file like this one:
 ```yaml
 # config/auto_scopes.yml
 Ceo:
@@ -78,7 +78,7 @@ Ceo:
     - age
 ```
 
-Doesn't matter the deepness of your association, auto_scopes will make joins to there, and call merge, it will produce 2 methods inside CEO´s model:
+Doesn't matter the deepness of your association, AutoScopes will make joins to there, and call merge, it will produce 2 methods inside CEO´s model:
 
 ```ruby
 # app/models/ceo.rb
@@ -91,7 +91,7 @@ def self.age(age)
 end
 ```
 
-AutoScopes also will create scope for each association, for example
+AutoScopes also create scope for each association, for example
 ```ruby
 # app/models/ceo.rb
 def self.by_companies(id)
