@@ -2,5 +2,6 @@
 	appraise rails_version do
 		gem 'test-unit', '~> 3.0' if rails_version == '3.2'
 		gem "rails", "~> #{rails_version}"
+		gem "codeclimate-test-reporter", group: :test, require: nil
 	end
 end
